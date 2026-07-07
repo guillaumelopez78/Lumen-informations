@@ -1,131 +1,16 @@
-# Squircle - Guidelines
-
-## Squircle Guidelines
-
-### Use Cases
-- Primary use case 1
-- Primary use case 2
-- Primary use case 3
-- Primary use case 4
-
-### Best Practices
-- Practice 1
-- Practice 2
-- Practice 3
-
-### Accessibility Requirements
-- Follow WCAG AA standards
-- Test with screen readers
-- Keyboard navigation support required
-- Color must not be the only conveyor of meaning
-
-
----
-
 ## Do / Don't
 
-### React (Web)
-
-
 | ✅ Do | ❌ Don't |
 |---|---|
-| Consistent sm (32px) across all list rows | Mixed sizes (16 / 40 / 24 px) — visual noise |
-| Use `type="icon" variant="subtle"` in transaction and list rows — it's the primary pattern in Shine | Use `variant="primary"` in dense lists — the subtle background is less distracting in data-heavy contexts |
-| Use Squircle to illustrate list item types (categories, transaction types) and for collaborator avatars — these are the two main contexts in Shine | Use Squircle as a decorative element unrelated to content identity |
-
-### Native (Mobile)
-
-
-| ✅ Do | ❌ Don't |
-|---|---|
-| Use Squircle to illustrate list item types and collaborator avatars on mobile — same as React | |
+| Best practice 1 | Bad practice 1 |
+| Best practice 2 | Bad practice 2 |
+| Best practice 3 | Bad practice 3 |
 
 ---
 
----
-
-### Imports
-
-**Web**:
-```tsx
-import { Squircle } from '@shinetools/lumen-react';
-```
-
-**Mobile**:
-```tsx
-import { Squircle } from '@shinetools/lumen-native';
-```
-
-### Basic Usage
+## Imports
 
 ```tsx
 import { Squircle } from '@shinetools/lumen-react';
-import { Folder } from 'lucide-react';
-
-// Icon type
-<Squircle
-  type="icon"
-  icon={<Folder />}
-  color="accent"
-  variant="subtle"
-  size="md"
-/>
-
-// Letters (initials)
-<Squircle
-  type="letters"
-  letters="AC"
-  color="neutral"
-  size="sm"
-/>
-
-// Avatar (image)
-<Squircle
-  type="avatar"
-  src="/logos/stripe.png"
-  size="md"
-/>
-```
-
----
-
----
-
-## Do / Don't
-
-### React (Web)
-
-
-| ✅ Do | ❌ Don't |
-|---|---|
-| Consistent sm (32px) across all list rows | Mixed sizes (16 / 40 / 24 px) — visual noise |
-| Use `type="icon" variant="subtle"` in transaction and list rows — it's the primary pattern in Shine | Use `variant="primary"` in dense lists — the subtle background is less distracting in data-heavy contexts |
-| Use Squircle to illustrate list item types (categories, transaction types) and for collaborator avatars — these are the two main contexts in Shine | Use Squircle as a decorative element unrelated to content identity |
-
-### Native (Mobile)
-
-
-| ✅ Do | ❌ Don't |
-|---|---|
-| Use Squircle to illustrate list item types and collaborator avatars on mobile — same as React | |
-
----
-
-
-### Implementation Pattern
-- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
-- Follow component API from source
-- Use design tokens for colors and spacing
-- Test in isolation, then in context
-
-### Imports
-
-**Web**:
-```tsx
-import { Squircle } from '@shinetools/lumen-react';
-```
-
-**Mobile**:
-```tsx
 import { Squircle } from '@shinetools/lumen-native';
 ```
