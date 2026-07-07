@@ -1,35 +1,18 @@
-# Lumen Design System
+# Lumen Brain
 
-**Lumen Brain**
-
-## 🎯 Overview
-
-Lumen is a minimalist, production-ready design system with 48 carefully crafted components for European fintech applications. Built for clarity, accessibility, and rapid development.
-
-**Key Principles:**
-- **Minimal Documentation** — Only what matters: "How to use", Guidelines (Do/Don't), Specs
-- **Component-First** — 48 verified components across 9 categories
-- **Product Focused** — Real product documentation for 4 key applications
-- **Web + Mobile** — Complete coverage for React (web) and Native (mobile)
+Single source of truth for Shine's design system and product knowledge.
 
 ---
 
 ## 📁 Structure
 
 ```
-lumen-component-specs/
-├── README.md                          ← You are here
+Lumen-Brain/
+├── README.md
 ├── Design-System/
-│   └── Components/                    ← 48 component folders
-│       ├── Accordion/
-│       │   ├── Overview.md           (How to use)
-│       │   ├── Guidelines.md         (Do/Don't table)
-│       │   ├── Specs.md              (Design tokens & props)
-│       │   └── Images/
-│       ├── Button/
-│       ├── TextField/
-│       └── ... (45 more components)
-└── Product/                           ← 4 product documentation systems
+│   ├── Composants/            ← 48 component folders (Overview, Guidelines, Specs)
+│   └── Content system/        ← UX writing rules, tone of voice, copy templates
+└── Product/                   ← Product knowledge for 4 Shine products
     ├── Accounting/
     ├── Banking/
     ├── Cash-Pilot/
@@ -38,219 +21,73 @@ lumen-component-specs/
 
 ---
 
-## 🎨 Component Categories
+## 🎨 Design-System
 
-### Actions (3)
-Button, Loader, Progress
+### Composants
 
-### Feedback (4)
-Alert, Banner, Callout, Toast
+48 components, each documented with the same three files:
 
-### Forms (11)
-Autocomplete, Checkbox, DatePicker, File Upload, Multi-Select, Period Picker, Phone Input, Pin, Radio Button, Select, TextField, Text Area
+- **Overview.md** — "How to use": when this component applies, when it doesn't
+- **Guidelines.md** — Do/Don't table of best practices
+- **Specs.md** — Props, variants, design tokens, source code links
 
-### Layout (6)
-Accordion, Divider, Squircle, Stack, Stepper, Switch
+**Categories:**
 
-### Navigation (9)
-Dialog, Drawer, Dropdown, Menu, Pagination, SideNav, Tabs, Segmented Control, Timeline
+| Category | Components |
+|---|---|
+| Actions | Button, Loader, Progress |
+| Feedback | Alert, Banner, Callout, Toast |
+| Forms | Autocomplete, Checkbox, DatePicker, File Upload, Multi-Select, Period Picker, Phone Input, Pin, Radio Button, Select, TextField, Text Area |
+| Layout | Accordion, Divider, Squircle, Stack, Stepper, Switch |
+| Navigation | Dialog, Drawer, Dropdown, Menu, Pagination, SideNav, Tabs, Segmented Control, Timeline |
+| Data Display | Avatar, Badge, Card, Flag, Table, Tag |
+| Assets | Icon, Illustration, Typography |
+| Other | Search, Tooltip, Transaction |
 
-### Data Display (6)
-Avatar, Badge, Card, Flag, Table, Tag
+### Content system
 
-### Assets (3)
-Icon, Illustration, Typography
+UX writing rules and copy references, shared across products:
 
-### Other (3)
-Search, Tooltip, Transaction
-
----
-
-## 📊 Documentation Status
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| **Total Components** | 48 | ✅ Complete |
-| **Documentation Coverage** | 100% | ✅ Complete |
-| **Web (lumen-react)** | Stable v0.0.1 | ✅ Production |
-| **Mobile (lumen-native)** | Stable v0.0.1 | ✅ Production |
-| **Guidelines (Do/Don't)** | 48/48 | ✅ Complete |
-| **Technical Specs** | 48/48 | ✅ Complete |
-| **Product Systems** | 4 | ✅ Complete |
+- **Formatting** — Numbers, dates, currencies, punctuation, capitalisation
+- **Language** — Anglicisms, British vs. American English, tone, localisation, language-sensitive components per market (DK, NL, FR, DE)
+- **Tone & Voice** — Action-oriented writing, help & support saved responses
+- **Accessibility** — Inclusive language
+- **Template library** — Ready-to-use copy templates (buttons, empty states, errors, modals) with EN/FR pairs
+- **Features names** — Canonical feature names and descriptions per domain (Banking, Accounting, Invoicing)
+- Page-level copy guides: CTA buttons, modals, notifications, error/success/warning messages, empty states, onboarding, inputs, links, titles
 
 ---
 
-## 🚀 Quick Start
+## 🎯 Product
 
-### Find a Component
+Product knowledge for Shine's 4 core products. Each product folder follows the same 6-section structure:
 
-Navigate to `Design-System/Components/{ComponentName}/` and read in order:
-
-1. **Overview.md** — When and how to use this component
-2. **Guidelines.md** — Do's and Don'ts (best practices)
-3. **Specs.md** — Technical details, props, design tokens
-
-### Example: Button Component
-
-```bash
-Design-System/Components/Button/
-├── Overview.md      → When to use buttons, usage patterns
-├── Guidelines.md    → Do: One accent button per screen max
-├── Specs.md         → Props, variants, design tokens
-└── Images/          → Screenshots and examples
+```
+Product/{ProductName}/
+├── 01_RESEARCH/          → User research, interviews, personas, pain points
+├── 02_COMPETITIVE/       → Competitor profiles, market landscape
+├── 03_STRATEGY/          → Positioning, go-to-market, market sizing
+├── 04_TECHNICAL/         → Architecture notes, technical decisions
+├── 05_DESIGN_ASSETS/     → Figma references, design specifications
+├── 06_DISCOVERY/         → Usability testing, validation, metrics
+├── ARCHIVE/              → Superseded documents kept for history
+├── Overview.md           → Project summary
+├── CHANGELOG.md          → Documentation update log
+└── sources.md            → Source tracking (Notion, etc.)
 ```
 
-### Explore Products
-
-Each product has complete documentation with 6 sections:
-
-```bash
-Product/Cash-Pilot/
-├── 01_RESEARCH/           → User research, pain points, personas
-├── 02_COMPETITIVE/        → Market analysis, competitor insights
-├── 03_STRATEGY/           → Go-to-market, positioning, roadmap
-├── 04_TECHNICAL/          → Architecture, technical decisions
-├── 05_DESIGN_ASSETS/      → Figma files, design specifications
-├── 06_DISCOVERY/          → Testing, validation, metrics
-├── Overview.md            → Project summary
-├── CHANGELOG.md           → Update history
-└── Images/                → Screenshots and assets
-```
+- **[Cash Pilot](Product/Cash-Pilot/)** — AI-powered cash flow forecasting for European SMBs. Shipped & scaling (May 2026), live in France, Germany, Denmark, Netherlands. Most complete section: 10 user interviews, 27 competitor profiles, market sizing, Maze test results.
+- **[Invoicing](Product/Invoicing/)** — Invoice creation and tracking.
+- **[Banking](Product/Banking/)** — Banking operations and account management.
+- **[Accounting](Product/Accounting/)** — Accounting and financial management.
 
 ---
 
-## 💻 For Developers
+## 🔗 Source Code
 
-### Web (React)
-
-```tsx
-import { Button } from '@shinetools/lumen-react';
-
-<Button variant="filled" color="accent">
-  Save Changes
-</Button>
-```
-
-👉 **[Full Documentation](Design-System/Components/Button/)**
-
-### Mobile (Native)
-
-```tsx
-import { Button } from '@shinetools/lumen-native';
-
-<Button variant="filled" color="accent">
-  Save Changes
-</Button>
-```
-
-👉 **[Full Documentation](Design-System/Components/Button/)**
+- 🌐 **Web (lumen-react):** https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react
+- 📱 **Mobile (lumen-native):** https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native
 
 ---
 
-## 🎯 Products
-
-### [Cash Pilot](Product/Cash-Pilot/)
-AI-powered cash flow forecasting for European SMBs
-- **Status:** Shipped & Scaling (May 2026)
-- **Markets:** France, Germany, Denmark, Netherlands
-- **MVP:** 30-180 day cash forecasts from banking data
-
-### [Invoicing](Product/Invoicing/)
-Simple, fast invoice creation and tracking
-
-### [Banking](Product/Banking/)
-Banking operations and account management
-
-### [Accounting](Product/Accounting/)
-Complete accounting and financial management
-
----
-
-## 📖 Documentation Format
-
-Each component follows a strict 3-file pattern:
-
-### Overview.md
-**Purpose:** Understand what this component does and when to use it.
-
-Contains a "How to use" section explaining:
-- When this component should be used
-- When NOT to use it
-- Usage patterns and context
-- No code examples, no imports, no links
-
-### Guidelines.md
-**Purpose:** Best practices and anti-patterns.
-
-Contains a Do/Don't comparison table:
-- Actionable rules with real examples
-- Text format only (no images)
-- Rules ranked by importance
-
-### Specs.md
-**Purpose:** Technical reference for implementers.
-
-Contains:
-- Component props and variants
-- Design tokens used
-- Import paths
-- Links to source code
-
----
-
-## 🔗 Links
-
-### Source Code
-- 🌐 **Web (React):** https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react
-- 📱 **Mobile (Native):** https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native
-
-### GitHub Repository
-- 📌 **This Repository:** https://github.com/guillaumelopez78/Lumendex
-
----
-
-## 🛠️ Contributing
-
-### Adding a New Component
-1. Create `Design-System/Components/{ComponentName}/`
-2. Add **Overview.md** — How to use section
-3. Add **Guidelines.md** — Do/Don't table
-4. Add **Specs.md** — Props, tokens, API reference
-5. Commit and push
-
-### Updating Documentation
-- Keep it minimal and focused
-- Update CHANGELOG.md with date and summary
-- Test on both web and mobile
-- No breaking changes without notification
-
----
-
-## 📊 Stats
-
-| Metric | Value |
-|--------|-------|
-| Total Components | 48 |
-| Documentation Files | 144+ (3 per component) |
-| Product Systems | 4 |
-| Product Sections | 6 per product |
-| Design Tokens | 100+ |
-| Accessibility | WCAG AA |
-| Browser Support | Modern (Chrome, Safari, Firefox, Edge) |
-| Mobile Support | iOS 13+, Android 8+ |
-
----
-
-## 📞 Support
-
-**Questions? Issues? Feedback?**
-- 📧 Email: team@shine.co
-- 💬 Slack: #design-system
-- 🐛 Issues: GitHub Issues
-
----
-
-**Last Updated:** July 7, 2026  
-**Version:** 1.0.0  
-**Status:** 🟢 Production Ready  
-**Maintained By:** Design System Team
+**Last Updated:** July 7, 2026
