@@ -23,24 +23,23 @@ Lumen is a minimalist, production-ready design system with 48 carefully crafted 
 ## 📁 Structure
 
 ```
-lumen-design-system/
+lumen-component-specs/
 ├── README.md                          ← You are here
 ├── design-system/
-│   ├── Components/                    ← 48 component folders
-│   │   ├── Accordion/
-│   │   │   ├── Overview.md           (How to use)
-│   │   │   ├── Guidelines.md         (Do/Don't table)
-│   │   │   ├── Specs.md              (Design tokens & props)
-│   │   │   └── Images/
-│   │   ├── Button/
-│   │   ├── TextField/
-│   │   └── ... (45 more components)
-│   │
-│   └── product/                       ← 4 product documentation systems
-│       ├── Accounting/
-│       ├── Banking/
-│       ├── Cash-Pilot/
-│       └── Invoicing/
+│   └── Components/                    ← 48 component folders
+│       ├── Accordion/
+│       │   ├── Overview.md           (How to use)
+│       │   ├── Guidelines.md         (Do/Don't table)
+│       │   ├── Specs.md              (Design tokens & props)
+│       │   └── Images/
+│       ├── Button/
+│       ├── TextField/
+│       └── ... (45 more components)
+└── product/                           ← 4 product documentation systems
+    ├── Accounting/
+    ├── Banking/
+    ├── Cash-Pilot/
+    └── Invoicing/
 ```
 
 ---
@@ -112,7 +111,7 @@ design-system/Components/Button/
 Each product has complete documentation with 6 sections:
 
 ```bash
-design-system/product/Cash-Pilot/
+product/Cash-Pilot/
 ├── 01_RESEARCH/           → User research, pain points, personas
 ├── 02_COMPETITIVE/        → Market analysis, competitor insights
 ├── 03_STRATEGY/           → Go-to-market, positioning, roadmap
@@ -156,19 +155,19 @@ import { Button } from '@shinetools/lumen-native';
 
 ## 🎯 Products
 
-### [Cash Pilot](design-system/product/Cash-Pilot/)
+### [Cash Pilot](product/Cash-Pilot/)
 AI-powered cash flow forecasting for European SMBs
 - **Status:** Shipped & Scaling (May 2026)
 - **Markets:** France, Germany, Denmark, Netherlands
 - **MVP:** 30-180 day cash forecasts from banking data
 
-### [Invoicing](design-system/product/Invoicing/)
+### [Invoicing](product/Invoicing/)
 Simple, fast invoice creation and tracking
 
-### [Banking](design-system/product/Banking/)
+### [Banking](product/Banking/)
 Banking operations and account management
 
-### [Accounting](design-system/product/Accounting/)
+### [Accounting](product/Accounting/)
 Complete accounting and financial management
 
 ---
