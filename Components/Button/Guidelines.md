@@ -13,11 +13,3 @@
 | Icon-only: `variant="text"` or `variant="tonal"` | Icon-only with `variant="filled"` |
 | Action verbs with context (e.g. "Save changes") | Single word labels (e.g. just "Save") |
 
----
-
-## Imports
-
-```tsx
-import { Button } from '@shinetools/lumen-react';
-import { Button } from '@shinetools/lumen-native';
-```
