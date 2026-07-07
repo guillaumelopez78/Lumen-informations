@@ -1,3 +1,21 @@
+## Visual Examples
+
+![Default Button States](./Images/00-default.png)
+
+### ✅ Do
+
+![Do Example](./Images/01-do.png)
+
+One accent button per screen (right), outlined on left. Clear hierarchy, easy scanning.
+
+### ❌ Don't
+
+![Don't Example](./Images/02-dont.png)
+
+Multiple accent buttons destroy hierarchy. User can't identify primary action.
+
+---
+
 ## Do / Don't
 
 | ✅ Do | ❌ Don't |
