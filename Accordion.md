@@ -1,9 +1,3 @@
----
-name: Accordion
-category: Layout
-status: stable
----
-
 # Accordion
 
 **Source Code**:
