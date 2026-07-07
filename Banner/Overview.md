@@ -1,25 +1,30 @@
----
-name: Banner
-category: Feedback
-status: stable
----
 # Banner
 
-## How to use
+## Purpose
 
-Full-width persistent messages at the **very top of the page**. Specifically:
-- **System-level warnings** → "Maintenance window 2pm-3pm CET tomorrow" (affects all users/page)
-- **Critical page-blocking errors** → "Database backup in progress, read-only mode until 14:00" (affects entire page)
-- **Account status alerts** → "Trial expires in 2 days — upgrade now", "Payment failed, service suspended"
-- **Persistent status** → "You are in demo mode" (stays visible until dismissed or resolved)
-- **Action required (critical)** → "Security verification needed before checkout" (must be acknowledged)
+Full-width persistent messages at the **very top of the page**.
 
-**Source Code**:
+## When to use
+
+Use banner for:
+
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/banner
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/banner
-
----
 
 ## Status & Availability
 

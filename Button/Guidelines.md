@@ -1,43 +1,38 @@
 # Button - Guidelines
 
-## Guidelines
+## Button-Specific Guidelines
 
-**Context by page/pattern**:
-- **Form footer** (signup, checkout, settings)
-  - Left: `outlined` "Cancel" or "Skip"
-  - Right: `filled + accent` "Save" or "Continue"
-  - Both full-width on mobile, auto-width on web
-- **Modal footer** (destructive confirmation)
-  - Left: `outlined` "Cancel"
-  - Right: `filled + danger` "Delete" (or appropriate verb)
-- **Table row actions**
-  - Edit: `text` or small `filled`
-  - Delete: small `filled + danger` or menu item
-- **Toolbar/header**
-  - Primary action (centered/prominent): `filled + accent`
-  - Secondary actions: `outlined` or `text`
-- **Bottom sheet (mobile)**
-  - Primary CTA at bottom (full-width, `filled + accent`)
-  - Secondary at top or left
+### Hierarchy & Context
+- **Primary CTA**: One `accent` button per screen maximum
+- **Secondary action**: `outlined` button for Cancel/Skip/Go back
+- **Tertiary action**: `text` button for Learn more/View docs
+- **Destructive action**: `danger` button only in confirmation dialogs
 
-**Web vs Mobile**:
-- Web: buttons auto-width, grouped horizontally in footers/toolbars
-- Mobile: buttons full-width in sticky footer (bottom sheet pattern)
-- Mobile: primary CTA always bottom-most (gravity/thumb reach)
-- Touch targets minimum 44px height (maintain on mobile)
+### Label Best Practices
+- Use action verbs: "Save changes", "Add expense", "Delete invoice"
+- Be specific: "Continue to checkout" not just "Continue"
+- Avoid generic labels: "OK", "Submit", "Click here"
+- Show verb in loading state: "Saving…", "Sending…"
 
-**When NOT to use Button**:
-- ❌ Text link to another page → use Link component
-- ❌ Toggle setting (on/off) → use Toggle component
-- ❌ Multiple exclusive choices → use RadioButton or Checkbox
-- ❌ Opening menu → use Menu component (though it has trigger button)
+### Layout Patterns
+- **Form footer**: Cancel (left, outlined) + Primary (right, accent)
+- **Modal footer**: Cancel (left) + Destructive action (right, danger)
+- **Toolbar**: Primary action centered, secondary actions on sides
+- **Mobile**: Primary CTA always bottom (thumb-reach gravity)
 
-**Label guidelines**:
-- Use infinitive verbs: "Save changes", "Add contact", "Delete file"
-- Contextual when possible: "Save changes" not just "Save"
-- Past-tense for loading: "Saving…", "Sending…" (not "Save…")
-- No generic labels: avoid "OK", "Submit", "Click here"
-- Specific outcomes: "Continue to checkout" not just "Continue"
+### Accessibility
+- Icon-only buttons require `aria-label`
+- Loading state must disable interaction
+- Focus visible at all times (keyboard navigation)
+- Touch targets minimum 44px height
+- Color alone must not convey meaning
+
+### Async Patterns
+- Use `loading={true}` with text update ("Saving…")
+- Disable button while loading (prevent double-click)
+- Show inline error or toast on failure
+- Clear success feedback after 2-3 seconds
+
 
 ---
 
@@ -142,3 +137,22 @@ import { Button } from '@shinetools/lumen-native';
 | Use clear labels even on mobile — context matters | Abbreviate labels to save space on mobile screens |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Button } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Button } from '@shinetools/lumen-native';
+```

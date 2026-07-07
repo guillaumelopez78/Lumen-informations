@@ -1,14 +1,38 @@
 # TextField - Guidelines
 
-## Guidelines
+## TextField-Specific Guidelines
 
-**Web vs Mobile**: TextField adapts automatically. On mobile, numeric keyboard appears for `type="number"`, email keyboard for `type="email"`, which improves input speed.
+### Label & Placeholder Strategy
+- **Label**: Always present, never float away (use visible label)
+- **Placeholder**: Use for format example only ("YYYY-MM-DD")
+- **Hint text**: Show constraints and format requirements
+- **Caption**: Only for errors or real help text
 
-**When NOT to use**:
-- ❌ Multi-line text → use TextArea
-- ❌ Predefined choices → use Select, Autocomplete, or Radio
-- ❌ Yes/No setting → use Toggle
-- ❌ Date input → use DatePicker
+### Validation Patterns
+- Validate `onBlur` (after user leaves field)
+- Show error message ONLY after blur
+- Match error message to actual validation rule
+- Give users actionable error text ("Enter 6 digits" not "Invalid")
+
+### Input Types
+- **Email**: Use `type="email"` for mobile keyboard
+- **Phone**: Use `type="tel"` for numeric keyboard
+- **Password**: Use `type="password"` with show/hide toggle
+- **Search**: Use `type="search"` with clear button
+- **Number**: Use `type="number"` with increment buttons
+
+### State Management
+- Pre-fill known values (first/last name, email)
+- Show loading indicator for async validation
+- Clear error when user starts typing
+- Use `disabled` sparingly (show reason in hint)
+
+### Accessibility
+- Label associated with `htmlFor` attribute
+- Error messages with `aria-describedby`
+- Required fields marked with `*` AND `aria-required="true"`
+- Hint text should enhance, not replace label
+
 
 ---
 
@@ -90,3 +114,22 @@ import { Mail } from 'lucide-react';
 | Use `readOnly` for non-editable data | Disable fields that should just be viewable |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { TextField } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { TextField } from '@shinetools/lumen-native';
+```

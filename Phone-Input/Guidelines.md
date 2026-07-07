@@ -1,26 +1,24 @@
 # Phone-Input - Guidelines
 
-## Guidelines
+## Phone-Input Guidelines
 
-**Context by page**:
-- **Signup form** → phone field (optional or required) with country selector
-- **Checkout** → billing/shipping phone with country code
-- **Profile/settings** → user contact phone number
-- **Customer creation** → phone field with country code (business customer)
-- **API integrations** → phone field for webhook callbacks
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Behavior**:
-- Country dropdown on left, phone number field on right
-- Country defaults to user's locale (browser language) if available
-- Auto-formats based on selected country (different countries have different formats)
-- Validates international phone format (optional on your component)
-- Returns full phone number with country code
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
 
-**Web vs Mobile**:
-- Web: country dropdown + text field side-by-side, comfortable spacing
-- Mobile: country dropdown stacked above or full-height above phone field
-- Mobile: phone keyboard appears when typing (tel input type)
-- Mobile: country search might be search + dropdown or native select
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -83,3 +81,22 @@ import { Input Phone Number } from '@shinetools/lumen-native';
 | [Good practice] | [Bad practice] |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Phone-Input } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Phone-Input } from '@shinetools/lumen-native';
+```

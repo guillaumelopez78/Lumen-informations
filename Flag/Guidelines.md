@@ -1,5 +1,25 @@
 # Flag - Guidelines
 
+## Flag Guidelines
+
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
+
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
+
 ---
 
 ## Do / Don't
@@ -56,3 +76,22 @@ import { Flag } from '@shinetools/lumen-react';
 | Use `alt="France"` (full name) rather than `alt="FR"` when writing explicit alt text | Use the raw ISO code as `alt` when the full name is available |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Flag } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Flag } from '@shinetools/lumen-native';
+```

@@ -1,14 +1,24 @@
 # Alert - Guidelines
 
-## Guidelines
+## Alert Guidelines
 
-**Behavior**:
-- Stays visible until dismissed (by user or automatic resolution)
-- Includes action button when user can take immediate action
-- Position: inline on page where context matters
-- At top of section if page-level, or near affected field if field-level
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**: Same behavior. On mobile, alert takes full width and wraps text.
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -55,3 +65,22 @@ import { Alert } from '@shinetools/lumen-native';
 | Keep body copy concise | Write long paragraphs inside an Alert |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Alert } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Alert } from '@shinetools/lumen-native';
+```

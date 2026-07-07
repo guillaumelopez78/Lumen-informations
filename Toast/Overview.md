@@ -1,24 +1,30 @@
----
-name: Toast
-category: Feedback
-status: stable
----
 # Toast
 
-## How to use
+## Purpose
 
-Non-blocking action feedback that auto-dismisses. Specifically:
-- **Success confirmations** → "Invoice sent", "Changes saved", "Duplicate created"
-- **Action results** → "File exported as PDF", "Team member added"
-- **Non-critical errors** → "Connection lost, retrying…" (user can continue working)
-- **Optional feedback** → showing optional next steps ("View invoice" link after send)
+Non-blocking action feedback that auto-dismisses.
 
-**Source Code**:
+## When to use
+
+Use toast for:
+
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/toast
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/toast
-
----
 
 ## Status & Availability
 

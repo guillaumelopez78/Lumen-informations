@@ -1,19 +1,24 @@
 # Banner - Guidelines
 
-## Guidelines
+## Banner Guidelines
 
-**Behavior**:
-- **Always at the very top of viewport** — above all content
-- Full-width, sticky (stays visible when scrolling)
-- Includes action button when user can immediately resolve
-  - Example: "Trial expires soon [Upgrade] [Dismiss]"
-- Optional dismiss button (always present for non-critical)
-- One banner per page (multiple banners confuse priority)
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**:
-- Web: full viewport width, sticky at top
-- Mobile: full viewport width, sticky at top (same as web)
-- Text wraps on mobile (message is concise and readable)
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -94,3 +99,22 @@ import { Banner } from '@shinetools/lumen-react';
 | Place Banner above the app header on mobile — sticky at the very top | Place Banner inside scroll content on mobile |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Banner } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Banner } from '@shinetools/lumen-native';
+```

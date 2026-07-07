@@ -1,32 +1,42 @@
 # Checkbox - Guidelines
 
-## Guidelines
+## Checkbox-Specific Guidelines
 
-**Use Checkbox when**: Multi-select choices OR independent boolean options that are **submitted together**. Specifically:
-- **Multi-select in forms** → "Select invoices to export" (checkboxes in a form, submit button at end)
-- **Feature toggles (deferred)** → "Email notifications" checkbox in settings (saved on form submit, not immediate)
-- **Agreement/consent** → "I accept terms and conditions" (binary choice with form submission)
-- **Optional fields** → "Include payment notes in receipt?" (saved with form)
-- **Filtered item selection** → select specific invoice items to duplicate/export
+### Use Cases
+- **Multi-select forms**: Checkboxes saved via submit button
+- **Filtering**: Multiple selection options in a list
+- **Agreements**: Accept terms, privacy policy checkboxes
+- **Permissions**: Grant multiple simultaneous permissions
 
-**Don't use Checkbox when**:
-- ❌ Immediate effect (no submit) → use Toggle instead (immediate state change)
-- ❌ Single mutually-exclusive choice → use RadioButton or Select
-- ❌ Many options (5+) → consider if checkboxes are right; consider collapsing with "Select all"
-- ❌ In large tables without deliberate selection UX → prefer table checkbox patterns
+### Label & Wording
+- Use statements, not questions: "Send weekly reports" not "Do you want updates?"
+- Keep labels short and scannable
+- Label the feature, not the action
+- All caps should be avoided (increases cognitive load)
 
-**Key distinction**: Checkbox = deferred action (submit after selecting). Toggle = immediate action (effect on change).
+### State Variations
+- **Checked**: User explicitly selected this option
+- **Unchecked**: User has not selected this option
+- **Indeterminate**: Mixed state in parent (partial selection)
+- **Disabled**: Option not available in current context
 
-**Behavior**:
-- Checked = true, Unchecked = false, Indeterminate = some items in group selected
-- Clicking checkbox toggles state immediately (visual feedback)
-- But actual save/submission happens on form submit or explicit action
-- Accessible: always has associated label (not placeholder text)
+### Grouping & Organization
+- Wrap in `<fieldset>` with `<legend>` for screen readers
+- Group related checkboxes visually
+- Order: Most common/important first
+- Show hint text for each option if complex
 
-**Web vs Mobile**:
-- Web: standard 16-20px checkbox, label on right
-- Mobile: increase touch target to 44px (use `comfortArea` prop)
-- Mobile: larger spacing between items in list
+### When NOT to Use
+- Single boolean in a form: Use Switch instead
+- Instant-effect toggle: Use Switch instead
+- Form with auto-save: Use Checkbox + submit separately
+
+### Accessibility
+- Label must be clickable (large touch target)
+- Group label announced before each option
+- Indeterminate state conveyed to screen readers
+- Keyboard: Tab/Space to select
+
 
 ---
 
@@ -113,3 +123,22 @@ const [checked, setChecked] = useState(false);
 | Use comfortArea on mobile for larger touch targets | Remove comfortArea on mobile — touch targets need to be larger |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Checkbox } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Checkbox } from '@shinetools/lumen-native';
+```

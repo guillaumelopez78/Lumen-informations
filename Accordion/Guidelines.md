@@ -1,55 +1,24 @@
 # Accordion - Guidelines
 
-## Guidelines
+## Accordion Guidelines
 
-**Use Accordion when**: Progressive disclosure of grouped content. Specifically:
-- **FAQ/help sections** → expandable Q&A on help page or support site
-- **Settings panels** → group related settings (Account, Notifications, Billing, Security)
-- **Transaction/invoice details** → expandable sections for line items, notes, attachments
-- **Collapsible documentation** → technical details, advanced options, code examples
-- **Form sections** → group related form fields (Billing address, Shipping address)
-- **Dense content with hierarchy** → reduce page scrolling by collapsing non-essential sections
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Don't use Accordion when**:
-- ❌ All content equally important → don't hide if users need everything visible
-- ❌ Deeply nested accordions → max 1 level deep (accordion inside accordion confuses)
-- ❌ Single expandable section → use Disclosure or plain collapsible div instead
-- ❌ Required reading → if users must see it, don't hide in accordion
-- ❌ Rare scenarios → if <10% of users expand a section, rethink the content
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
 
-**Accordion patterns in Shine**:
-- **Multiple sections open simultaneously** → default behavior, users expand as needed
-- **All sections collapsed by default** → except the first section (defaultOpen)
-- **With dividers** → visually separate sections (`showDivider` prop)
-- **Without dividers** → more compact, for simpler hierarchies
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
 
-**Context by page**:
-- **Settings page** → Account (always open), Notifications, Billing, Security (all collapsible)
-- **Invoice detail** → Summary (open), Line items (collapsible), Notes (collapsible), Attachments (collapsible)
-- **Help/FAQ** → "How do I export data?" (expandable), "What payment methods?", "Why is my balance X?" (all collapsible)
-- **Form (onboarding)** → Company info (open), Billing address, Shipping address (collapsible)
-
-**Behavior**:
-- Click header to toggle open/closed
-- Multiple sections can be open at once (no exclusive mode)
-- Smooth expand/collapse animation (300ms)
-- No nested accordions (use flat structure with proper headings)
-- Content inside can be anything: text, form fields, images, tables
-
-**Accessibility**:
-- Header is a clickable button with aria-expanded state
-- Keyboard: Tab to focus, Space/Enter to toggle
-- Screen reader announces expanded/collapsed state
-
-**Web vs Mobile**:
-- Web: accordions in 1-2 column layouts, side-by-side if needed
-- Mobile: always single column, full-width
-- Touch targets on mobile: 44px minimum height for header
-
-**When NOT to hide content**:
-- Critical information (required form fields) → show in form, not accordion
-- High-frequency settings → don't accordion if >50% of users need it
-- First-time users → first section open, rest closed (defaultOpen)
 
 ---
 
@@ -124,3 +93,22 @@ import { Accordion } from '@shinetools/lumen-react';
 > 🔴 To define — Native Accordion guidelines not yet documented.
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Accordion } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Accordion } from '@shinetools/lumen-native';
+```

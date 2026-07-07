@@ -1,63 +1,24 @@
 # Stack - Guidelines
 
-## Guidelines
+## Stack Guidelines
 
-**Use Stack when**: Building layouts with flex containers using design tokens. Two primitives:
-- **XStack**: Horizontal row (flex row)
-- **YStack**: Vertical column (flex column)
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-Both automatically use design token spacing (8px, 16px, 24px, etc.) — no magic numbers or inline styles.
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
 
-**XStack (Horizontal) use cases**:
-- **Icon + label rows** → check icon + "Payment confirmed" text
-- **Side-by-side elements** → label on left, value on right
-- **Toolbar buttons** → multiple buttons in a horizontal row
-- **Form field rows** → multiple inputs on same row (on web; stack on mobile)
-- **Card headers** → title + action button side-by-side
-- **Price display** → currency icon + amount + unit
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
 
-**YStack (Vertical) use cases**:
-- **Form fields** → stacked input fields with consistent spacing
-- **Card content** → stacked sections (title, description, footer)
-- **List items** → vertical list of related items
-- **Modal/dialog body** → stacked content sections
-- **Section layout** → stacked content blocks
-
-**Key principles**:
-- Always use `gap` prop with design tokens (8, 12, 16, 24, 32)
-- Never use inline `style` with magic numbers
-- Align items with `align` prop (center, start, end, stretch)
-- Justify content with `justify` prop (start, end, center, space-between, space-around)
-
-**Common patterns**:
-```tsx
-// Icon + label (centered vertically)
-<XStack gap={8} align="center">
-  <Icon />
-  <Text />
-</XStack>
-
-// Form fields (vertical stack)
-<YStack gap={16}>
-  <TextField />
-  <TextField />
-  <Button />
-</YStack>
-
-// Card layout (nested stacks)
-<YStack gap={12} padding={16}>
-  <Typography.Header>Title</Typography.Header>
-  <XStack justify="space-between">
-    <Text>Label</Text>
-    <Text weight="bold">Value</Text>
-  </XStack>
-</YStack>
-```
-
-**Web vs Mobile**:
-- Web: XStack for horizontal layouts that fit
-- Mobile: often convert XStack to YStack for full-width single column
-- Always test that spacing tokens work at mobile viewport
 
 ---
 
@@ -126,3 +87,22 @@ import { XStack, YStack } from '@shinetools/lumen-react';
 | Compose stacks — `<YStack>` containing `<XStack>` items | Use one-off flex wrappers for every layout |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Stack } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Stack } from '@shinetools/lumen-native';
+```

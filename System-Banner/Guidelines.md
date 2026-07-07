@@ -1,5 +1,25 @@
 # System-Banner - Guidelines
 
+## System-Banner Guidelines
+
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
+
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
+
 ---
 
 ## Do / Don't
@@ -63,3 +83,22 @@ import { SystemBanner } from '@shinetools/lumen-react';
 | Include an action if users need to do something | Leave an action-less `danger` banner — always offer a path forward |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { System-Banner } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { System-Banner } from '@shinetools/lumen-native';
+```

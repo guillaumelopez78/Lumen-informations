@@ -1,5 +1,43 @@
 # Switch - Guidelines
 
+## Switch-Specific Guidelines
+
+### Core Pattern
+- **Immediate effect**: Setting takes effect instantly
+- **No save button**: Toggle alone is the complete action
+- **Stateful**: Reflects current on/off state
+- **Accessible**: Must announce state to screen readers
+
+### When to Use Switch
+- Notification preferences (instant on/off)
+- Feature toggles and flags
+- Permission grants (access control)
+- Settings with immediate effect
+
+### When NOT to Use Switch
+- Form-based selection: Use Checkbox instead
+- Multi-select filtering: Use Checkbox instead
+- Delayed saves: Use Checkbox + submit button instead
+
+### Label Best Practices
+- Describe what is being enabled: "Invoice reminders", "2FA"
+- Avoid generic labels: "Enable" alone is unclear
+- Use status-positive language: "Notifications" not "Don't notify"
+- Keep labels short and scannable
+
+### Context & Placement
+- **Permissions**: Primary pattern in Shine
+- **Settings lists**: Use `size="compact"` for density
+- **Feature toggles**: Show in feature cards
+- **Dashboard**: Top-level on/off controls
+
+### Feedback
+- Immediate visual feedback (toggle animates)
+- Show confirmation if irreversible
+- Toast/dialog for significant changes
+- History/audit log for access changes
+
+
 ---
 
 ## Do / Don't
@@ -78,3 +116,22 @@ import { Switch } from '@shinetools/lumen-react';
 | Use Switch for permissions and access rights on mobile — same pattern as React | |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Switch } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Switch } from '@shinetools/lumen-native';
+```

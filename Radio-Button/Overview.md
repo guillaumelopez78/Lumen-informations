@@ -1,25 +1,30 @@
----
-name: Radio-Button
-category: Forms
-status: stable
----
 # Radio-Button
 
-## How to use
+## Purpose
 
-Mutually exclusive (pick ONE) choice where **all options must be visible** for comparison. Specifically:
-- **Billing frequency selection** → Monthly, Quarterly, Annual (3-4 options visible side-by-side)
-- **Invoice template choice** → Standard, Minimalist, Professional (design templates, user compares visually)
-- **Account type selection** → Personal, Business, Enterprise (during signup)
-- **Feature flags with context** → "Auto-save: Always, On request, Never" (user sees all + descriptions)
-- **Payment method selection** → Bank transfer, Card, SEPA (limited options, all visible)
+Mutually exclusive (pick ONE) choice where **all options must be visible** for comparison.
 
-**Source Code**:
-**Source Code**:
-- 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/radio-button
-- 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/radio-button
+## When to use
+
+Use radio-button for:
+
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
 
 ---
+
+**Source Code**:
+- 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/radiobutton
+- 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/radiobutton
 
 ## Status & Availability
 
@@ -27,5 +32,3 @@ Mutually exclusive (pick ONE) choice where **all options must be visible** for c
 |----------|--------|---------|-------|
 | 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
 | 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |
-
-**Note**: Radio in vault maps to radio-button in repository.

@@ -1,14 +1,24 @@
 # Toast - Guidelines
 
-## Guidelines
+## Toast Guidelines
 
-**Behavior**:
-- Auto-dismiss after **5 seconds** (standard duration in Shine)
-- Optional action button: `{ label: 'Undo', onClick: () => ... }`
-- Position: **bottom-right** on web, **bottom center** on mobile
-- Tone: past-tense, factual. "Invoice sent" not "Your invoice has been successfully sent!" (no congratulations)
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**: Same 5-second duration. Position changes: web (bottom-right), mobile (bottom-center).
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -84,3 +94,22 @@ toast.danger('Export failed — try again');
 | Display Toast at the bottom of the screen on mobile | Place Toast at the top — bottom is the confirmed position |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Toast } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Toast } from '@shinetools/lumen-native';
+```

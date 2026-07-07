@@ -1,18 +1,24 @@
 # Tag - Guidelines
 
-## Guidelines
+## Tag Guidelines
 
-**Behavior**:
-- Click tag → if `isSelected` or `onClick` provided, toggles state
-- Click X (clear button) → fires `onClear()`, removes tag from view
-- Tag can be selected or unselected (visual distinction)
-- No destructive actions (tag is a filter/label, not a button)
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**:
-- Web: inline tags in toolbar, flexible wrapping
-- Mobile: single-row scrollable tags or wrap to multiple rows
-- Mobile: larger touch targets (44px minimum height with `size="large"`)
-- Mobile: clear button (X) more prominent on touch
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -92,3 +98,22 @@ import { Tag, TagGroup } from '@shinetools/lumen-react';
 > 🔴 To define — Native Tag guidelines not yet documented.
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Tag } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Tag } from '@shinetools/lumen-native';
+```

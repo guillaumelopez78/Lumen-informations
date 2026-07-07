@@ -1,5 +1,25 @@
 # Pin - Guidelines
 
+## Pin Guidelines
+
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
+
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
+
 ---
 
 ## Do / Don't
@@ -83,3 +103,22 @@ import { Pin } from '@shinetools/lumen-react';
 | OTP (6 digits, unmasked) and app login PIN (4 digits, masked) — same as React | Use Pin for other numeric inputs |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Pin } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Pin } from '@shinetools/lumen-native';
+```

@@ -1,17 +1,24 @@
 # Radio-Button - Guidelines
 
-## Guidelines
+## Radio-Button Guidelines
 
-**Context by page**:
-- Signup/onboarding → account type radio selection
-- Billing settings → plan frequency (monthly/annual) selection
-- Invoice editor → template/design selection
-- Settings → preference selection (auto-save behavior, notification frequency)
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**:
-- Web: inline radio options if 3-4 fit in one row, otherwise stack vertically
-- Mobile: always stack vertically (one radio per row) for touch targets
-- Mobile: increase touch area with `comfortArea` prop
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -84,3 +91,22 @@ const [freq, setFreq] = useState('monthly');
 > 🔴 To define — Native RadioButton guidelines not yet documented.
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Radio-Button } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Radio-Button } from '@shinetools/lumen-native';
+```

@@ -1,30 +1,34 @@
----
-name: Stack (X-Stack / Y-Stack)
-category: Layout
-status: stable
----
 # Stack
 
-## How to use
+## Purpose
 
-Building layouts with flex containers using design tokens. Two primitives:
-- **XStack**: Horizontal row (flex row)
-- **YStack**: Vertical column (flex column)
+Building layouts with flex containers using design tokens.
 
-Both automatically use design token spacing (8px, 16px, 24px, etc.) — no magic numbers or inline styles.
+## When to use
 
-**Source Code**:
-**Source Code**:
-- 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/x-stack and y-stack
-- 📱 **Mobile (lumen-native)**: Not applicable
+Use stack for:
+
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
 
 ---
+
+**Source Code**:
+- 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/stack
+- 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/stack
 
 ## Status & Availability
 
 | Platform | Status | Version | Notes |
 |----------|--------|---------|-------|
 | 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
-| 📱 Mobile (lumen-native) | 🟡 WIP | — | Use platform flexbox instead |
-
-**Note**: Stack (x-stack & y-stack) is web only.
+| 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |

@@ -1,26 +1,34 @@
----
-name: Transaction
-category: Data display
-status: stable
----
 # Transaction
 
-## How to use
+## Purpose
 
 Use this component for its intended purpose in the design system.
 
-**Source Code**:
+## When to use
+
+Use transaction for:
+
+- Feature 1
+- Feature 2
+- Feature 3
+- Feature 4
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/transaction
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/transaction
-
----
 
 ## Status & Availability
 
 | Platform | Status | Version | Notes |
 |----------|--------|---------|-------|
-| 🌐 Web (lumen-react) | 🟡 WIP | — | Not yet released, coming soon |
-| 📱 Mobile (lumen-native) | 🟡 WIP | — | Not yet released, coming soon |
-
-**Recommendation**: Custom/internal pattern only. Transaction is vault-only at this time.
+| 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
+| 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |

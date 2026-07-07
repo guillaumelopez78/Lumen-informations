@@ -1,24 +1,30 @@
----
-name: Dialog
-category: Overlay
-status: stable
----
 # Dialog
 
-## How to use
+## Purpose
 
-Critical confirmations that BLOCK user flow. Specifically:
-- **Destructive confirmations** → delete invoice, revoke API key, close account (must be explicit)
-- **Blocking errors** → payment failed, insufficient balance, invalid VAT (user can't proceed without action)
-- **Rare critical dialogs** → account suspension warning (very limited use)
-- **Permission blocking** → 2FA verification before sensitive action (only when required)
+Modal overlay for critical decisions and destructive confirmations.
 
-**Source Code**:
+## When to use
+
+Use dialog for:
+
+- Delete confirmation with warning
+- Important notices and alerts
+- Complex form flows
+- Multi-step processes
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/dialog
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/dialog
-
----
 
 ## Status & Availability
 
@@ -26,5 +32,3 @@ Critical confirmations that BLOCK user flow. Specifically:
 |----------|--------|---------|-------|
 | 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
 | 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |
-
-**Note**: Modal in vault maps to Dialog in repository.

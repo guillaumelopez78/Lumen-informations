@@ -1,25 +1,30 @@
----
-name: Checkbox
-category: Forms
-status: stable
----
 # Checkbox
 
-## How to use
+## Purpose
 
-Multi-select choices OR independent boolean options that are **submitted together**. Specifically:
-- **Multi-select in forms** → "Select invoices to export" (checkboxes in a form, submit button at end)
-- **Feature toggles (deferred)** → "Email notifications" checkbox in settings (saved on form submit, not immediate)
-- **Agreement/consent** → "I accept terms and conditions" (binary choice with form submission)
-- **Optional fields** → "Include payment notes in receipt?" (saved with form)
-- **Filtered item selection** → select specific invoice items to duplicate/export
+Binary choice element for multi-select groups and boolean form values.
 
-**Source Code**:
+## When to use
+
+Use checkbox for:
+
+- Agreement acceptance in forms
+- Filtering options in lists
+- Permission selections
+- Boolean settings with submit
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/checkbox
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/checkbox
-
----
 
 ## Status & Availability
 

@@ -1,20 +1,30 @@
----
-name: Switch
-category: Forms
-status: stable
----
 # Switch
 
-## How to use
+## Purpose
 
-Use this component for its intended purpose in the design system.
+Immediate-effect toggle for settings and feature flags.
 
-**Source Code**:
+## When to use
+
+Use switch for:
+
+- Notification preferences
+- Permission toggles
+- Feature flags and settings
+- Access control toggles
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/switch
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/switch
-
----
 
 ## Status & Availability
 
@@ -22,5 +32,3 @@ Use this component for its intended purpose in the design system.
 |----------|--------|---------|-------|
 | 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
 | 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |
-
-**Note**: Toggle in vault maps to Switch in repository.

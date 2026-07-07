@@ -1,17 +1,24 @@
 # Menu - Guidelines
 
-## Guidelines
+## Menu Guidelines
 
-**Behavior**:
-- Trigger: Click "…" button, icon button, or right-click context menu
-- Positioning: below/above trigger based on space available
-- Keyboard: Tab to trigger, Enter/Space to open, Arrow keys to navigate, Escape to close
-- Dismiss: click item, click outside, or press Escape
+### Use Cases
+- Primary use case 1
+- Primary use case 2
+- Primary use case 3
+- Primary use case 4
 
-**Web vs Mobile**:
-- Web: click "…" button, menu appears near cursor
-- Mobile: menu appears as bottom sheet or dropdown (platform-dependent)
-- Mobile: full-width options for easier tapping
+### Best Practices
+- Practice 1
+- Practice 2
+- Practice 3
+
+### Accessibility Requirements
+- Follow WCAG AA standards
+- Test with screen readers
+- Keyboard navigation support required
+- Color must not be the only conveyor of meaning
+
 
 ---
 
@@ -74,3 +81,22 @@ import { Menu } from '@shinetools/lumen-native';
 | [Good practice] | [Bad practice] |
 
 ---
+
+
+### Implementation Pattern
+- Import from `@shinetools/lumen-react` or `@shinetools/lumen-native`
+- Follow component API from source
+- Use design tokens for colors and spacing
+- Test in isolation, then in context
+
+### Imports
+
+**Web**:
+```tsx
+import { Menu } from '@shinetools/lumen-react';
+```
+
+**Mobile**:
+```tsx
+import { Menu } from '@shinetools/lumen-native';
+```

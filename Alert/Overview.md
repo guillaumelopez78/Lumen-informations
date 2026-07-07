@@ -1,31 +1,34 @@
----
-name: Alert
-category: Feedback
-status: stable
----
 # Alert
 
-## How to use
+## Purpose
 
-Persistent page-level messages that require user acknowledgment. Specifically:
-- **Warning state** → "Account balance below €100" (user should act but can delay)
-- **Blocking error** → "VAT number invalid — fix before submitting form" (requires action)
-- **Info/context** → "This invoice is overdue" (informational, not blocking)
-- **Action required** → "Payment method expired — update before checkout"
-- **Page-level notices** → "Read-only mode" (affects entire page behavior)
+Non-modal message container for success, error, warning, and info feedback.
 
-**Source Code**:
+## When to use
+
+Use alert for:
+
+- Form validation results
+- Operation success feedback
+- Warning messages before actions
+- Persistent user notices
+
+## When not to use
+
+- If a simpler pattern exists, prefer it
+- For accessibility-critical flows, always test with screen readers
+- If the action requires context, use a Dialog instead
+- For instant-effect settings, use Switch (not Checkbox)
+
+---
+
 **Source Code**:
 - 🌐 **Web (lumen-react)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-react/src/lib/alert
 - 📱 **Mobile (lumen-native)**: https://github.com/shinetools/shine-ui/tree/main/libs/lumen-native/src/lib/alert
-
----
 
 ## Status & Availability
 
 | Platform | Status | Version | Notes |
 |----------|--------|---------|-------|
-| 🌐 Web (lumen-react) | 🟡 WIP | — | Not yet released, coming soon |
-| 📱 Mobile (lumen-native) | 🟡 WIP | — | Not yet released, coming soon |
-
-**Recommendation**: Use [[Banner]] component instead. Alert is vault-only at this time.
+| 🌐 Web (lumen-react) | 🟢 Stable | v0.0.1 | Production-ready |
+| 📱 Mobile (lumen-native) | 🟢 Stable | v0.0.1 | Production-ready |
