@@ -1,4 +1,4 @@
-# Lumen Brain
+# Lumendex
 
 Single source of truth for Shine's design system and product knowledge.
 
@@ -7,7 +7,7 @@ Single source of truth for Shine's design system and product knowledge.
 ## 📁 Structure
 
 ```
-Lumen-Brain/
+Lumendex/
 ├── README.md
 ├── Design-System/
 │   ├── Composants/            ← 48 component folders (Overview, Guidelines, Specs)
